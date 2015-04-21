@@ -1,14 +1,12 @@
 package com.aspose.tasks.model;
 
-import java.util.*;
-import org.joda.time.*;
-
-
+import java.util.ArrayList;
+import java.util.List;
 public class Resource {
   private String Name = null;
   private Integer Uid = null;
   private Integer Id = null;
-  private String Type = null;
+  private Integer Type = null;
   private Boolean IsNull = null;
   private String Initials = null;
   private String Phonetics = null;
@@ -45,9 +43,9 @@ public class Resource {
   private String RemainingOvertimeWorkString = null;
   private Integer PercentWorkComplete = null;
   private Double StandardRate = null;
-  private String StandardRateFormat = null;
+  private Integer StandardRateFormat = null;
   private Double Cost = null;
-  private String OvertimeRateFormat = null;
+  private Integer OvertimeRateFormat = null;
   private Double OvertimeCost = null;
   private Double CostPerUse = null;
   private Double ActualCost = null;
@@ -66,7 +64,7 @@ public class Resource {
   private Boolean IsGeneric = null;
   private Boolean IsInactive = null;
   private Boolean IsEnterprise = null;
-  private String String = null;
+  private Integer BookingType = null;
   private String ActualWorkProtected = null;
   private String ActualWorkProtectedString = null;
   private String ActualOvertimeWorkProtected = null;
@@ -196,19 +194,19 @@ public class Resource {
 
   /**
 	 * getType
-	 * Gets String
+	 * Gets ResourceType
 	 * @return Type
 	 */
-  public String getType() {
+  public Integer getType() {
     return Type;
   }
 
 	/**
 	 * setType
-	 * Sets String
-	 * @param Type String
+	 * Sets ResourceType
+	 * @param Type ResourceType
 	 */
-  public void setType(String Type) {
+  public void setType(Integer Type) {
     this.Type = Type;
   }
 
@@ -466,7 +464,7 @@ public class Resource {
 
   /**
 	 * getAvailableFrom
-	 * Gets String
+	 * Gets DateTime
 	 * @return AvailableFrom
 	 */
   public String getAvailableFrom() {
@@ -475,8 +473,8 @@ public class Resource {
 
 	/**
 	 * setAvailableFrom
-	 * Sets String
-	 * @param AvailableFrom String
+	 * Sets DateTime
+	 * @param AvailableFrom DateTime
 	 */
   public void setAvailableFrom(String AvailableFrom) {
     this.AvailableFrom = AvailableFrom;
@@ -484,7 +482,7 @@ public class Resource {
 
   /**
 	 * getAvailableTo
-	 * Gets String
+	 * Gets DateTime
 	 * @return AvailableTo
 	 */
   public String getAvailableTo() {
@@ -493,8 +491,8 @@ public class Resource {
 
 	/**
 	 * setAvailableTo
-	 * Sets String
-	 * @param AvailableTo String
+	 * Sets DateTime
+	 * @param AvailableTo DateTime
 	 */
   public void setAvailableTo(String AvailableTo) {
     this.AvailableTo = AvailableTo;
@@ -502,7 +500,7 @@ public class Resource {
 
   /**
 	 * getStart
-	 * Gets String
+	 * Gets DateTime
 	 * @return Start
 	 */
   public String getStart() {
@@ -511,8 +509,8 @@ public class Resource {
 
 	/**
 	 * setStart
-	 * Sets String
-	 * @param Start String
+	 * Sets DateTime
+	 * @param Start DateTime
 	 */
   public void setStart(String Start) {
     this.Start = Start;
@@ -520,7 +518,7 @@ public class Resource {
 
   /**
 	 * getFinish
-	 * Gets String
+	 * Gets DateTime
 	 * @return Finish
 	 */
   public String getFinish() {
@@ -529,8 +527,8 @@ public class Resource {
 
 	/**
 	 * setFinish
-	 * Sets String
-	 * @param Finish String
+	 * Sets DateTime
+	 * @param Finish DateTime
 	 */
   public void setFinish(String Finish) {
     this.Finish = Finish;
@@ -556,7 +554,7 @@ public class Resource {
 
   /**
 	 * getAccrueAt
-	 * Gets String
+	 * Gets CostAccrualType
 	 * @return AccrueAt
 	 */
   public String getAccrueAt() {
@@ -565,8 +563,8 @@ public class Resource {
 
 	/**
 	 * setAccrueAt
-	 * Sets String
-	 * @param AccrueAt String
+	 * Sets CostAccrualType
+	 * @param AccrueAt CostAccrualType
 	 */
   public void setAccrueAt(String AccrueAt) {
     this.AccrueAt = AccrueAt;
@@ -862,19 +860,19 @@ public class Resource {
 
   /**
 	 * getStandardRateFormat
-	 * Gets String
+	 * Gets RateFormatType
 	 * @return StandardRateFormat
 	 */
-  public String getStandardRateFormat() {
+  public Integer getStandardRateFormat() {
     return StandardRateFormat;
   }
 
 	/**
 	 * setStandardRateFormat
-	 * Sets String
-	 * @param StandardRateFormat String
+	 * Sets RateFormatType
+	 * @param StandardRateFormat RateFormatType
 	 */
-  public void setStandardRateFormat(String StandardRateFormat) {
+  public void setStandardRateFormat(Integer StandardRateFormat) {
     this.StandardRateFormat = StandardRateFormat;
   }
 
@@ -898,19 +896,19 @@ public class Resource {
 
   /**
 	 * getOvertimeRateFormat
-	 * Gets String
+	 * Gets RateFormatType
 	 * @return OvertimeRateFormat
 	 */
-  public String getOvertimeRateFormat() {
+  public Integer getOvertimeRateFormat() {
     return OvertimeRateFormat;
   }
 
 	/**
 	 * setOvertimeRateFormat
-	 * Sets String
-	 * @param OvertimeRateFormat String
+	 * Sets RateFormatType
+	 * @param OvertimeRateFormat RateFormatType
 	 */
-  public void setOvertimeRateFormat(String OvertimeRateFormat) {
+  public void setOvertimeRateFormat(Integer OvertimeRateFormat) {
     this.OvertimeRateFormat = OvertimeRateFormat;
   }
 
@@ -1239,21 +1237,21 @@ public class Resource {
   }
 
   /**
-	 * getString
-	 * Gets String
-	 * @return String
+	 * getBookingType
+	 * Gets BookingType
+	 * @return BookingType
 	 */
-  public String getString() {
-    return String;
+  public Integer getBookingType() {
+    return BookingType;
   }
 
 	/**
-	 * setString
-	 * Sets String
-	 * @param String String
+	 * setBookingType
+	 * Sets BookingType
+	 * @param BookingType BookingType
 	 */
-  public void setString(String String) {
-    this.String = String;
+  public void setBookingType(Integer BookingType) {
+    this.BookingType = BookingType;
   }
 
   /**
@@ -1348,7 +1346,7 @@ public class Resource {
 
   /**
 	 * getCreationDate
-	 * Gets String
+	 * Gets DateTime
 	 * @return CreationDate
 	 */
   public String getCreationDate() {
@@ -1357,8 +1355,8 @@ public class Resource {
 
 	/**
 	 * setCreationDate
-	 * Sets String
-	 * @param CreationDate String
+	 * Sets DateTime
+	 * @param CreationDate DateTime
 	 */
   public void setCreationDate(String CreationDate) {
     this.CreationDate = CreationDate;
@@ -2635,7 +2633,7 @@ public class Resource {
     sb.append("  IsGeneric: ").append(IsGeneric).append("\n");
     sb.append("  IsInactive: ").append(IsInactive).append("\n");
     sb.append("  IsEnterprise: ").append(IsEnterprise).append("\n");
-    sb.append("  String: ").append(String).append("\n");
+    sb.append("  BookingType: ").append(BookingType).append("\n");
     sb.append("  ActualWorkProtected: ").append(ActualWorkProtected).append("\n");
     sb.append("  ActualWorkProtectedString: ").append(ActualWorkProtectedString).append("\n");
     sb.append("  ActualOvertimeWorkProtected: ").append(ActualOvertimeWorkProtected).append("\n");

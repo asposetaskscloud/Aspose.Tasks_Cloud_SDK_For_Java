@@ -1,16 +1,15 @@
 package com.aspose.tasks.model;
 
-import com.aspose.tasks.model.TaskLinkType;
 import com.aspose.tasks.model.Link;
-import com.aspose.tasks.model.TimeUnitType;
+
 public class TaskLink {
   private Link Link = null;
   private Integer Index = null;
   private Integer PredecessorUid = null;
   private Integer SuccessorUid = null;
-  private String LinkType = null;
+  private Integer LinkType = null;
   private Integer Lag = null;
-  private String LagFormat = null;
+  private Integer LagFormat = null;
   /**
 	 * getLink
 	 * Gets Link
@@ -85,19 +84,19 @@ public class TaskLink {
 
   /**
 	 * getLinkType
-	 * Gets TaskLinkType
+	 * Gets Integer
 	 * @return LinkType
 	 */
-  public String getLinkType() {
+  public Integer getLinkType() {
     return LinkType;
   }
 
 	/**
 	 * setLinkType
-	 * Sets TaskLinkType
-	 * @param LinkType TaskLinkType
+	 * Sets Integer
+	 * @param LinkType Integer
 	 */
-  public void setLinkType(String LinkType) {
+  public void setLinkType(Integer LinkType) {
     this.LinkType = LinkType;
   }
 
@@ -121,19 +120,19 @@ public class TaskLink {
 
   /**
 	 * getLagFormat
-	 * Gets TimeUnitType
+	 * Gets Integer
 	 * @return LagFormat
 	 */
-  public String getLagFormat() {
+  public Integer getLagFormat() {
     return LagFormat;
   }
 
 	/**
 	 * setLagFormat
-	 * Sets TimeUnitType
-	 * @param LagFormat TimeUnitType
+	 * Sets Integer
+	 * @param LagFormat Integer
 	 */
-  public void setLagFormat(String LagFormat) {
+  public void setLagFormat(Integer LagFormat) {
     this.LagFormat = LagFormat;
   }
 

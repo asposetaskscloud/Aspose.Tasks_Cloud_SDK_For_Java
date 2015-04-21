@@ -1,7 +1,5 @@
 package com.aspose.tasks.model;
 
-import org.joda.time.*;
-import com.aspose.tasks.model.Link;
 public class TaskItem {
   private Link Link = null;
   private Integer Uid = null;

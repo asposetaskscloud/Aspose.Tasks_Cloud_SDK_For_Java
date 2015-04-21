@@ -1,10 +1,7 @@
 package com.aspose.tasks.model;
 
-import java.util.*;
-import org.joda.time.*;
-
-
-import com.aspose.tasks.model.ConstraintType;
+import java.util.ArrayList;
+import java.util.List;
 public class Task {
   private Integer Uid = null;
   private Integer Id = null;
@@ -28,7 +25,7 @@ public class Task {
   private String BudgetWorkString = null;
   private Double BudgetCost = null;
   private String ConstraintDate = null;
-  private String ConstraintType = null;
+  private Integer ConstraintType = null;
   private String Contact = null;
   private Double Cost = null;
   private Double Cv = null;
@@ -42,7 +39,7 @@ public class Task {
   private Integer FinishSlack = null;
   private Integer FinishVariance = null;
   private Double FixedCost = null;
-  private String FixedCostAccrual = null;
+  private Integer FixedCostAccrual = null;
   private Integer FreeSlack = null;
   private String GUID = null;
   private Boolean HideBar = null;
@@ -87,7 +84,7 @@ public class Task {
   private Integer CalendarUid = null;
   private Boolean IsManual = null;
   private Integer TotalSlack = null;
-  private String Type = null;
+  private Integer Type = null;
   private String Wbs = null;
   private Integer Priority = null;
   private String Work = null;
@@ -97,7 +94,7 @@ public class Task {
   private Double Acwp = null;
   private Double Bcws = null;
   private Double Bcwp = null;
-  private String LevelingDelayFromat = null;
+  private Integer LevelingDelayFromat = null;
   private String Predecessors = null;
   private String Successors = null;
   private String BaselineStart = null;
@@ -105,7 +102,7 @@ public class Task {
   private String BaselineDuration = null;
   private String BaselineDurationString = null;
   private Double BaselineFixedCost = null;
-  private String BaselineDurationFormat = null;
+  private Integer BaselineDurationFormat = null;
   private Boolean BaselineEstimatedDuration = null;
   private String BaselineWork = null;
   private String BaselineWorkString = null;
@@ -117,7 +114,7 @@ public class Task {
   private String Baseline1Duration = null;
   private String Baseline1DurationString = null;
   private Double Baseline1FixedCost = null;
-  private String Baseline1DurationFormat = null;
+  private Integer Baseline1DurationFormat = null;
   private Boolean Baseline1EstimatedDuration = null;
   private String Baseline1Work = null;
   private String Baseline1WorkString = null;
@@ -129,7 +126,7 @@ public class Task {
   private String Baseline2Duration = null;
   private String Baseline2DurationString = null;
   private Double Baseline2FixedCost = null;
-  private String Baseline2DurationFormat = null;
+  private Integer Baseline2DurationFormat = null;
   private Boolean Baseline2EstimatedDuration = null;
   private String Baseline2Work = null;
   private String Baseline2WorkString = null;
@@ -141,7 +138,7 @@ public class Task {
   private String Baseline3Duration = null;
   private String Baseline3DurationString = null;
   private Double Baseline3FixedCost = null;
-  private String Baseline3DurationFormat = null;
+  private Integer Baseline3DurationFormat = null;
   private Boolean Baseline3EstimatedDuration = null;
   private String Baseline3Work = null;
   private String Baseline3WorkString = null;
@@ -153,7 +150,7 @@ public class Task {
   private String Baseline4Duration = null;
   private String Baseline4DurationString = null;
   private Double Baseline4FixedCost = null;
-  private String Baseline4DurationFormat = null;
+  private Integer Baseline4DurationFormat = null;
   private Boolean Baseline4EstimatedDuration = null;
   private String Baseline4Work = null;
   private String Baseline4WorkString = null;
@@ -165,7 +162,7 @@ public class Task {
   private String Baseline5Duration = null;
   private String Baseline5DurationString = null;
   private Double Baseline5FixedCost = null;
-  private String Baseline5DurationFormat = null;
+  private Integer Baseline5DurationFormat = null;
   private Boolean Baseline5EstimatedDuration = null;
   private String Baseline5Work = null;
   private String Baseline5WorkString = null;
@@ -177,7 +174,7 @@ public class Task {
   private String Baseline6Duration = null;
   private String Baseline6DurationString = null;
   private Double Baseline6FixedCost = null;
-  private String Baseline6DurationFormat = null;
+  private Integer Baseline6DurationFormat = null;
   private Boolean Baseline6EstimatedDuration = null;
   private String Baseline6Work = null;
   private String Baseline6WorkString = null;
@@ -189,7 +186,7 @@ public class Task {
   private String Baseline7Duration = null;
   private String Baseline7DurationString = null;
   private Double Baseline7FixedCost = null;
-  private String Baseline7DurationFormat = null;
+  private Integer Baseline7DurationFormat = null;
   private Boolean Baseline7EstimatedDuration = null;
   private String Baseline7Work = null;
   private String Baseline7WorkString = null;
@@ -201,7 +198,7 @@ public class Task {
   private String Baseline8Duration = null;
   private String Baseline8DurationString = null;
   private Double Baseline8FixedCost = null;
-  private String Baseline8DurationFormat = null;
+  private Integer Baseline8DurationFormat = null;
   private Boolean Baseline8EstimatedDuration = null;
   private String Baseline8Work = null;
   private String Baseline8WorkString = null;
@@ -213,7 +210,7 @@ public class Task {
   private String Baseline9Duration = null;
   private String Baseline9DurationString = null;
   private Double Baseline9FixedCost = null;
-  private String Baseline9DurationFormat = null;
+  private Integer Baseline9DurationFormat = null;
   private Boolean Baseline9EstimatedDuration = null;
   private String Baseline9Work = null;
   private String Baseline9WorkString = null;
@@ -225,7 +222,7 @@ public class Task {
   private String Baseline10Duration = null;
   private String Baseline10DurationString = null;
   private Double Baseline10FixedCost = null;
-  private String Baseline10DurationFormat = null;
+  private Integer Baseline10DurationFormat = null;
   private Boolean BaselineEstimated10Duration = null;
   private String Baseline10Work = null;
   private String Baseline10WorkString = null;
@@ -635,7 +632,7 @@ public class Task {
 	 * Gets ConstraintType
 	 * @return ConstraintType
 	 */
-  public String getConstraintType() {
+  public Integer getConstraintType() {
     return ConstraintType;
   }
 
@@ -644,7 +641,7 @@ public class Task {
 	 * Sets ConstraintType
 	 * @param ConstraintType ConstraintType
 	 */
-  public void setConstraintType(String ConstraintType) {
+  public void setConstraintType(Integer ConstraintType) {
     this.ConstraintType = ConstraintType;
   }
 
@@ -884,19 +881,19 @@ public class Task {
 
   /**
 	 * getFixedCostAccrual
-	 * Gets String
+	 * Gets CostAccrualType
 	 * @return FixedCostAccrual
 	 */
-  public String getFixedCostAccrual() {
+  public Integer getFixedCostAccrual() {
     return FixedCostAccrual;
   }
 
 	/**
 	 * setFixedCostAccrual
-	 * Sets String
-	 * @param FixedCostAccrual String
+	 * Sets CostAccrualType
+	 * @param FixedCostAccrual CostAccrualType
 	 */
-  public void setFixedCostAccrual(String FixedCostAccrual) {
+  public void setFixedCostAccrual(Integer FixedCostAccrual) {
     this.FixedCostAccrual = FixedCostAccrual;
   }
 
@@ -1694,19 +1691,19 @@ public class Task {
 
   /**
 	 * getType
-	 * Gets String
+	 * Gets TaskType
 	 * @return Type
 	 */
-  public String getType() {
+  public Integer getType() {
     return Type;
   }
 
 	/**
 	 * setType
-	 * Sets String
-	 * @param Type String
+	 * Sets TaskType
+	 * @param Type TaskType
 	 */
-  public void setType(String Type) {
+  public void setType(Integer Type) {
     this.Type = Type;
   }
 
@@ -1874,19 +1871,19 @@ public class Task {
 
   /**
 	 * getLevelingDelayFromat
-	 * Gets String
+	 * Gets Integer
 	 * @return LevelingDelayFromat
 	 */
-  public String getLevelingDelayFromat() {
+  public Integer getLevelingDelayFromat() {
     return LevelingDelayFromat;
   }
 
 	/**
 	 * setLevelingDelayFromat
-	 * Sets String
-	 * @param LevelingDelayFromat String
+	 * Sets Integer
+	 * @param LevelingDelayFromat Integer
 	 */
-  public void setLevelingDelayFromat(String LevelingDelayFromat) {
+  public void setLevelingDelayFromat(Integer LevelingDelayFromat) {
     this.LevelingDelayFromat = LevelingDelayFromat;
   }
 
@@ -2018,19 +2015,19 @@ public class Task {
 
   /**
 	 * getBaselineDurationFormat
-	 * Gets String
+	 * Gets Integer
 	 * @return BaselineDurationFormat
 	 */
-  public String getBaselineDurationFormat() {
+  public Integer getBaselineDurationFormat() {
     return BaselineDurationFormat;
   }
 
 	/**
 	 * setBaselineDurationFormat
-	 * Sets String
-	 * @param BaselineDurationFormat String
+	 * Sets Integer
+	 * @param BaselineDurationFormat Integer
 	 */
-  public void setBaselineDurationFormat(String BaselineDurationFormat) {
+  public void setBaselineDurationFormat(Integer BaselineDurationFormat) {
     this.BaselineDurationFormat = BaselineDurationFormat;
   }
 
@@ -2234,19 +2231,19 @@ public class Task {
 
   /**
 	 * getBaseline1DurationFormat
-	 * Gets String
+	 * Gets Integer
 	 * @return Baseline1DurationFormat
 	 */
-  public String getBaseline1DurationFormat() {
+  public Integer getBaseline1DurationFormat() {
     return Baseline1DurationFormat;
   }
 
 	/**
 	 * setBaseline1DurationFormat
-	 * Sets String
-	 * @param Baseline1DurationFormat String
+	 * Sets Integer
+	 * @param Baseline1DurationFormat Integer
 	 */
-  public void setBaseline1DurationFormat(String Baseline1DurationFormat) {
+  public void setBaseline1DurationFormat(Integer Baseline1DurationFormat) {
     this.Baseline1DurationFormat = Baseline1DurationFormat;
   }
 
@@ -2450,19 +2447,19 @@ public class Task {
 
   /**
 	 * getBaseline2DurationFormat
-	 * Gets String
+	 * Gets Integer
 	 * @return Baseline2DurationFormat
 	 */
-  public String getBaseline2DurationFormat() {
+  public Integer getBaseline2DurationFormat() {
     return Baseline2DurationFormat;
   }
 
 	/**
 	 * setBaseline2DurationFormat
-	 * Sets String
-	 * @param Baseline2DurationFormat String
+	 * Sets Integer
+	 * @param Baseline2DurationFormat Integer
 	 */
-  public void setBaseline2DurationFormat(String Baseline2DurationFormat) {
+  public void setBaseline2DurationFormat(Integer Baseline2DurationFormat) {
     this.Baseline2DurationFormat = Baseline2DurationFormat;
   }
 
@@ -2666,19 +2663,19 @@ public class Task {
 
   /**
 	 * getBaseline3DurationFormat
-	 * Gets String
+	 * Gets Integer
 	 * @return Baseline3DurationFormat
 	 */
-  public String getBaseline3DurationFormat() {
+  public Integer getBaseline3DurationFormat() {
     return Baseline3DurationFormat;
   }
 
 	/**
 	 * setBaseline3DurationFormat
-	 * Sets String
-	 * @param Baseline3DurationFormat String
+	 * Sets Integer
+	 * @param Baseline3DurationFormat Integer
 	 */
-  public void setBaseline3DurationFormat(String Baseline3DurationFormat) {
+  public void setBaseline3DurationFormat(Integer Baseline3DurationFormat) {
     this.Baseline3DurationFormat = Baseline3DurationFormat;
   }
 
@@ -2882,19 +2879,19 @@ public class Task {
 
   /**
 	 * getBaseline4DurationFormat
-	 * Gets String
+	 * Gets Integer
 	 * @return Baseline4DurationFormat
 	 */
-  public String getBaseline4DurationFormat() {
+  public Integer getBaseline4DurationFormat() {
     return Baseline4DurationFormat;
   }
 
 	/**
 	 * setBaseline4DurationFormat
-	 * Sets String
-	 * @param Baseline4DurationFormat String
+	 * Sets Integer
+	 * @param Baseline4DurationFormat Integer
 	 */
-  public void setBaseline4DurationFormat(String Baseline4DurationFormat) {
+  public void setBaseline4DurationFormat(Integer Baseline4DurationFormat) {
     this.Baseline4DurationFormat = Baseline4DurationFormat;
   }
 
@@ -3098,19 +3095,19 @@ public class Task {
 
   /**
 	 * getBaseline5DurationFormat
-	 * Gets String
+	 * Gets Integer
 	 * @return Baseline5DurationFormat
 	 */
-  public String getBaseline5DurationFormat() {
+  public Integer getBaseline5DurationFormat() {
     return Baseline5DurationFormat;
   }
 
 	/**
 	 * setBaseline5DurationFormat
-	 * Sets String
-	 * @param Baseline5DurationFormat String
+	 * Sets Integer
+	 * @param Baseline5DurationFormat Integer
 	 */
-  public void setBaseline5DurationFormat(String Baseline5DurationFormat) {
+  public void setBaseline5DurationFormat(Integer Baseline5DurationFormat) {
     this.Baseline5DurationFormat = Baseline5DurationFormat;
   }
 
@@ -3314,19 +3311,19 @@ public class Task {
 
   /**
 	 * getBaseline6DurationFormat
-	 * Gets String
+	 * Gets Integer
 	 * @return Baseline6DurationFormat
 	 */
-  public String getBaseline6DurationFormat() {
+  public Integer getBaseline6DurationFormat() {
     return Baseline6DurationFormat;
   }
 
 	/**
 	 * setBaseline6DurationFormat
-	 * Sets String
-	 * @param Baseline6DurationFormat String
+	 * Sets Integer
+	 * @param Baseline6DurationFormat Integer
 	 */
-  public void setBaseline6DurationFormat(String Baseline6DurationFormat) {
+  public void setBaseline6DurationFormat(Integer Baseline6DurationFormat) {
     this.Baseline6DurationFormat = Baseline6DurationFormat;
   }
 
@@ -3530,19 +3527,19 @@ public class Task {
 
   /**
 	 * getBaseline7DurationFormat
-	 * Gets String
+	 * Gets Integer
 	 * @return Baseline7DurationFormat
 	 */
-  public String getBaseline7DurationFormat() {
+  public Integer getBaseline7DurationFormat() {
     return Baseline7DurationFormat;
   }
 
 	/**
 	 * setBaseline7DurationFormat
-	 * Sets String
-	 * @param Baseline7DurationFormat String
+	 * Sets Integer
+	 * @param Baseline7DurationFormat Integer
 	 */
-  public void setBaseline7DurationFormat(String Baseline7DurationFormat) {
+  public void setBaseline7DurationFormat(Integer Baseline7DurationFormat) {
     this.Baseline7DurationFormat = Baseline7DurationFormat;
   }
 
@@ -3746,19 +3743,19 @@ public class Task {
 
   /**
 	 * getBaseline8DurationFormat
-	 * Gets String
+	 * Gets Integer
 	 * @return Baseline8DurationFormat
 	 */
-  public String getBaseline8DurationFormat() {
+  public Integer getBaseline8DurationFormat() {
     return Baseline8DurationFormat;
   }
 
 	/**
 	 * setBaseline8DurationFormat
-	 * Sets String
-	 * @param Baseline8DurationFormat String
+	 * Sets Integer
+	 * @param Baseline8DurationFormat Integer
 	 */
-  public void setBaseline8DurationFormat(String Baseline8DurationFormat) {
+  public void setBaseline8DurationFormat(Integer Baseline8DurationFormat) {
     this.Baseline8DurationFormat = Baseline8DurationFormat;
   }
 
@@ -3962,19 +3959,19 @@ public class Task {
 
   /**
 	 * getBaseline9DurationFormat
-	 * Gets String
+	 * Gets Integer
 	 * @return Baseline9DurationFormat
 	 */
-  public String getBaseline9DurationFormat() {
+  public Integer getBaseline9DurationFormat() {
     return Baseline9DurationFormat;
   }
 
 	/**
 	 * setBaseline9DurationFormat
-	 * Sets String
-	 * @param Baseline9DurationFormat String
+	 * Sets Integer
+	 * @param Baseline9DurationFormat Integer
 	 */
-  public void setBaseline9DurationFormat(String Baseline9DurationFormat) {
+  public void setBaseline9DurationFormat(Integer Baseline9DurationFormat) {
     this.Baseline9DurationFormat = Baseline9DurationFormat;
   }
 
@@ -4178,19 +4175,19 @@ public class Task {
 
   /**
 	 * getBaseline10DurationFormat
-	 * Gets String
+	 * Gets Integer
 	 * @return Baseline10DurationFormat
 	 */
-  public String getBaseline10DurationFormat() {
+  public Integer getBaseline10DurationFormat() {
     return Baseline10DurationFormat;
   }
 
 	/**
 	 * setBaseline10DurationFormat
-	 * Sets String
-	 * @param Baseline10DurationFormat String
+	 * Sets Integer
+	 * @param Baseline10DurationFormat Integer
 	 */
-  public void setBaseline10DurationFormat(String Baseline10DurationFormat) {
+  public void setBaseline10DurationFormat(Integer Baseline10DurationFormat) {
     this.Baseline10DurationFormat = Baseline10DurationFormat;
   }
 

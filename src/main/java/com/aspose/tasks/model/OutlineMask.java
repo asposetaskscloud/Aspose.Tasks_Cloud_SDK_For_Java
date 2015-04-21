@@ -1,9 +1,9 @@
 package com.aspose.tasks.model;
 
-
+import com.aspose.tasks.model.MaskType;
 public class OutlineMask {
   private Integer Level = null;
-  private String Type = null;
+  private MaskType Type = null;
   private Integer Length = null;
   private String Separator = null;
   /**
@@ -26,19 +26,19 @@ public class OutlineMask {
 
   /**
 	 * getType
-	 * Gets String
+	 * Gets MaskType
 	 * @return Type
 	 */
-  public String getType() {
+  public MaskType getType() {
     return Type;
   }
 
 	/**
 	 * setType
-	 * Sets String
-	 * @param Type String
+	 * Sets MaskType
+	 * @param Type MaskType
 	 */
-  public void setType(String Type) {
+  public void setType(MaskType Type) {
     this.Type = Type;
   }
 

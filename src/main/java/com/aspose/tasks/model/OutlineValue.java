@@ -1,10 +1,10 @@
 package com.aspose.tasks.model;
 
-
+import com.aspose.tasks.model.OutlineValueType;
 public class OutlineValue {
   private Integer ValueId = null;
   private String FieldGuid = null;
-  private String Type = null;
+  private OutlineValueType Type = null;
   private Integer ParentValueId = null;
   private String Value = null;
   private String Description = null;
@@ -47,19 +47,19 @@ public class OutlineValue {
 
   /**
 	 * getType
-	 * Gets String
+	 * Gets OutlineValueType
 	 * @return Type
 	 */
-  public String getType() {
+  public OutlineValueType getType() {
     return Type;
   }
 
 	/**
 	 * setType
-	 * Sets String
-	 * @param Type String
+	 * Sets OutlineValueType
+	 * @param Type OutlineValueType
 	 */
-  public void setType(String Type) {
+  public void setType(OutlineValueType Type) {
     this.Type = Type;
   }
 

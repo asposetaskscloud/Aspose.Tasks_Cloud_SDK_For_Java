@@ -1,18 +1,54 @@
 package com.aspose.tasks.model;
 
 public class DateTime {
+  private Integer Year = null;
+  private Integer Month = null;
   private Integer Day = null;
+  private Integer Hour = null;
+  private Integer Minute = null;
+  private Integer Second = null;
+  private Integer Millisecond = null;
   private String DayOfWeek = null;
   private Integer DayOfYear = null;
-  private Integer Hour = null;
   private String Kind = null;
-  private Integer Millisecond = null;
-  private Integer Minute = null;
-  private Integer Month = null;
-  private Integer Second = null;
   private Long Ticks = null;
   private String TimeOfDay = null;
-  private Integer Year = null;
+  /**
+	 * getYear
+	 * Gets Integer
+	 * @return Year
+	 */
+  public Integer getYear() {
+    return Year;
+  }
+
+	/**
+	 * setYear
+	 * Sets Integer
+	 * @param Year Integer
+	 */
+  public void setYear(Integer Year) {
+    this.Year = Year;
+  }
+
+  /**
+	 * getMonth
+	 * Gets Integer
+	 * @return Month
+	 */
+  public Integer getMonth() {
+    return Month;
+  }
+
+	/**
+	 * setMonth
+	 * Sets Integer
+	 * @param Month Integer
+	 */
+  public void setMonth(Integer Month) {
+    this.Month = Month;
+  }
+
   /**
 	 * getDay
 	 * Gets Integer
@@ -29,6 +65,78 @@ public class DateTime {
 	 */
   public void setDay(Integer Day) {
     this.Day = Day;
+  }
+
+  /**
+	 * getHour
+	 * Gets Integer
+	 * @return Hour
+	 */
+  public Integer getHour() {
+    return Hour;
+  }
+
+	/**
+	 * setHour
+	 * Sets Integer
+	 * @param Hour Integer
+	 */
+  public void setHour(Integer Hour) {
+    this.Hour = Hour;
+  }
+
+  /**
+	 * getMinute
+	 * Gets Integer
+	 * @return Minute
+	 */
+  public Integer getMinute() {
+    return Minute;
+  }
+
+	/**
+	 * setMinute
+	 * Sets Integer
+	 * @param Minute Integer
+	 */
+  public void setMinute(Integer Minute) {
+    this.Minute = Minute;
+  }
+
+  /**
+	 * getSecond
+	 * Gets Integer
+	 * @return Second
+	 */
+  public Integer getSecond() {
+    return Second;
+  }
+
+	/**
+	 * setSecond
+	 * Sets Integer
+	 * @param Second Integer
+	 */
+  public void setSecond(Integer Second) {
+    this.Second = Second;
+  }
+
+  /**
+	 * getMillisecond
+	 * Gets Integer
+	 * @return Millisecond
+	 */
+  public Integer getMillisecond() {
+    return Millisecond;
+  }
+
+	/**
+	 * setMillisecond
+	 * Sets Integer
+	 * @param Millisecond Integer
+	 */
+  public void setMillisecond(Integer Millisecond) {
+    this.Millisecond = Millisecond;
   }
 
   /**
@@ -68,24 +176,6 @@ public class DateTime {
   }
 
   /**
-	 * getHour
-	 * Gets Integer
-	 * @return Hour
-	 */
-  public Integer getHour() {
-    return Hour;
-  }
-
-	/**
-	 * setHour
-	 * Sets Integer
-	 * @param Hour Integer
-	 */
-  public void setHour(Integer Hour) {
-    this.Hour = Hour;
-  }
-
-  /**
 	 * getKind
 	 * Gets String
 	 * @return Kind
@@ -101,78 +191,6 @@ public class DateTime {
 	 */
   public void setKind(String Kind) {
     this.Kind = Kind;
-  }
-
-  /**
-	 * getMillisecond
-	 * Gets Integer
-	 * @return Millisecond
-	 */
-  public Integer getMillisecond() {
-    return Millisecond;
-  }
-
-	/**
-	 * setMillisecond
-	 * Sets Integer
-	 * @param Millisecond Integer
-	 */
-  public void setMillisecond(Integer Millisecond) {
-    this.Millisecond = Millisecond;
-  }
-
-  /**
-	 * getMinute
-	 * Gets Integer
-	 * @return Minute
-	 */
-  public Integer getMinute() {
-    return Minute;
-  }
-
-	/**
-	 * setMinute
-	 * Sets Integer
-	 * @param Minute Integer
-	 */
-  public void setMinute(Integer Minute) {
-    this.Minute = Minute;
-  }
-
-  /**
-	 * getMonth
-	 * Gets Integer
-	 * @return Month
-	 */
-  public Integer getMonth() {
-    return Month;
-  }
-
-	/**
-	 * setMonth
-	 * Sets Integer
-	 * @param Month Integer
-	 */
-  public void setMonth(Integer Month) {
-    this.Month = Month;
-  }
-
-  /**
-	 * getSecond
-	 * Gets Integer
-	 * @return Second
-	 */
-  public Integer getSecond() {
-    return Second;
-  }
-
-	/**
-	 * setSecond
-	 * Sets Integer
-	 * @param Second Integer
-	 */
-  public void setSecond(Integer Second) {
-    this.Second = Second;
   }
 
   /**
@@ -211,40 +229,22 @@ public class DateTime {
     this.TimeOfDay = TimeOfDay;
   }
 
-  /**
-	 * getYear
-	 * Gets Integer
-	 * @return Year
-	 */
-  public Integer getYear() {
-    return Year;
-  }
-
-	/**
-	 * setYear
-	 * Sets Integer
-	 * @param Year Integer
-	 */
-  public void setYear(Integer Year) {
-    this.Year = Year;
-  }
-
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class DateTime {\n");
+    sb.append("  Year: ").append(Year).append("\n");
+    sb.append("  Month: ").append(Month).append("\n");
     sb.append("  Day: ").append(Day).append("\n");
+    sb.append("  Hour: ").append(Hour).append("\n");
+    sb.append("  Minute: ").append(Minute).append("\n");
+    sb.append("  Second: ").append(Second).append("\n");
+    sb.append("  Millisecond: ").append(Millisecond).append("\n");
     sb.append("  DayOfWeek: ").append(DayOfWeek).append("\n");
     sb.append("  DayOfYear: ").append(DayOfYear).append("\n");
-    sb.append("  Hour: ").append(Hour).append("\n");
     sb.append("  Kind: ").append(Kind).append("\n");
-    sb.append("  Millisecond: ").append(Millisecond).append("\n");
-    sb.append("  Minute: ").append(Minute).append("\n");
-    sb.append("  Month: ").append(Month).append("\n");
-    sb.append("  Second: ").append(Second).append("\n");
     sb.append("  Ticks: ").append(Ticks).append("\n");
     sb.append("  TimeOfDay: ").append(TimeOfDay).append("\n");
-    sb.append("  Year: ").append(Year).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

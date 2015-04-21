@@ -1,15 +1,17 @@
 package com.aspose.tasks.model;
 
 import java.util.*;
-
+import com.aspose.tasks.model.CustomFieldType;
+import com.aspose.tasks.model.CalculationType;
+import com.aspose.tasks.model.RollupType;
+import com.aspose.tasks.model.ElementType;
 public class ExtendedAttributeDefinition {
   private String FieldId = null;
   private String FieldName = null;
-  private String CfType = null;
+  private CustomFieldType CfType = null;
   private String Guid = null;
-  private String String = null;
+  private ElementType ElementType = null;
   private Integer MaxMultiValues = null;
-  private Integer ElementType = null;
   private Boolean UserDef = null;
   private String Alias = null;
   private String SecondaryPid = null;
@@ -17,8 +19,8 @@ public class ExtendedAttributeDefinition {
   private String DefaultGuid = null;
   private String LookupUid = null;
   private String PhoneticsAlias = null;
-  private String RollupType = null;
-  private String CalculationType = null;
+  private RollupType RollupType = null;
+  private CalculationType CalculationType = null;
   private String Formula = null;
   private Boolean RestrictValues = null;
   private Integer ValuelistSortOrder = null;
@@ -64,19 +66,19 @@ public class ExtendedAttributeDefinition {
 
   /**
 	 * getCfType
-	 * Gets String
+	 * Gets CustomFieldType
 	 * @return CfType
 	 */
-  public String getCfType() {
+  public CustomFieldType getCfType() {
     return CfType;
   }
 
 	/**
 	 * setCfType
-	 * Sets String
-	 * @param CfType String
+	 * Sets CustomFieldType
+	 * @param CfType CustomFieldType
 	 */
-  public void setCfType(String CfType) {
+  public void setCfType(CustomFieldType CfType) {
     this.CfType = CfType;
   }
 
@@ -99,21 +101,21 @@ public class ExtendedAttributeDefinition {
   }
 
   /**
-	 * getString
-	 * Gets String
-	 * @return String
+	 * getElementType
+	 * Gets ElementType
+	 * @return ElementType
 	 */
-  public String getString() {
-    return String;
+  public ElementType getElementType() {
+    return ElementType;
   }
 
 	/**
-	 * setString
-	 * Sets String
-	 * @param String String
+	 * setElementType
+	 * Sets ElementType
+	 * @param ElementType ElementType
 	 */
-  public void setString(String String) {
-    this.String = String;
+  public void setElementType(ElementType ElementType) {
+    this.ElementType = ElementType;
   }
 
   /**
@@ -132,24 +134,6 @@ public class ExtendedAttributeDefinition {
 	 */
   public void setMaxMultiValues(Integer MaxMultiValues) {
     this.MaxMultiValues = MaxMultiValues;
-  }
-  
-    /**
-	 * getElementType
-	 * Gets Integer
-	 * @return ElementType
-	 */
-  public Integer getElementType() {
-    return ElementType;
-  }
-
-	/**
-	 * setMaxMultiValues
-	 * Sets Integer
-	 * @param ElementType Integer
-	 */
-  public void setElementType(Integer ElementType) {
-    this.ElementType = ElementType;
   }
 
   /**
@@ -280,10 +264,10 @@ public class ExtendedAttributeDefinition {
 
   /**
 	 * getRollupType
-	 * Gets String
-	 * @return String
+	 * Gets RollupType
+	 * @return RollupType
 	 */
-  public String getRollupType() {
+  public RollupType getRollupType() {
     return RollupType;
   }
 
@@ -292,7 +276,7 @@ public class ExtendedAttributeDefinition {
 	 * Sets RollupType
 	 * @param RollupType RollupType
 	 */
-  public void setRollupType(String RollupType) {
+  public void setRollupType(RollupType RollupType) {
     this.RollupType = RollupType;
   }
 
@@ -301,7 +285,7 @@ public class ExtendedAttributeDefinition {
 	 * Gets CalculationType
 	 * @return CalculationType
 	 */
-  public String getCalculationType() {
+  public CalculationType getCalculationType() {
     return CalculationType;
   }
 
@@ -310,7 +294,7 @@ public class ExtendedAttributeDefinition {
 	 * Sets CalculationType
 	 * @param CalculationType CalculationType
 	 */
-  public void setCalculationType(String CalculationType) {
+  public void setCalculationType(CalculationType CalculationType) {
     this.CalculationType = CalculationType;
   }
 
@@ -448,7 +432,7 @@ public class ExtendedAttributeDefinition {
     sb.append("  FieldName: ").append(FieldName).append("\n");
     sb.append("  CfType: ").append(CfType).append("\n");
     sb.append("  Guid: ").append(Guid).append("\n");
-    sb.append("  String: ").append(String).append("\n");
+    sb.append("  ElementType: ").append(ElementType).append("\n");
     sb.append("  MaxMultiValues: ").append(MaxMultiValues).append("\n");
     sb.append("  UserDef: ").append(UserDef).append("\n");
     sb.append("  Alias: ").append(Alias).append("\n");

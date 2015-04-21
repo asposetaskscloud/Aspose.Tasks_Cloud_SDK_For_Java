@@ -1,41 +1,40 @@
 package com.aspose.tasks.model;
 
-import org.joda.time.*;
 public class WorkingTime {
   private String FromTime = null;
   private String ToTime = null;
   /**
-	 * getFromTime
-	 * Gets DateTime
-	 * @return FromTime
-	 */
+         * getFromTime
+         * Gets String
+         * @return FromTime
+         */
   public String getFromTime() {
     return FromTime;
   }
 
-	/**
-	 * setFromTime
-	 * Sets DateTime
-	 * @param FromTime DateTime
-	 */
+        /**
+         * setFromTime
+         * Sets String
+         * @param FromTime String
+         */
   public void setFromTime(String FromTime) {
     this.FromTime = FromTime;
   }
 
   /**
-	 * getToTime
-	 * Gets DateTime
-	 * @return ToTime
-	 */
+         * getToTime
+         * Gets String
+         * @return ToTime
+         */
   public String getToTime() {
     return ToTime;
   }
 
-	/**
-	 * setToTime
-	 * Sets DateTime
-	 * @param ToTime DateTime
-	 */
+        /**
+         * setToTime
+         * Sets String
+         * @param ToTime String
+         */
   public void setToTime(String ToTime) {
     this.ToTime = ToTime;
   }

@@ -1,10 +1,9 @@
 package com.aspose.tasks.model;
 
-import java.util.*;
-import org.joda.time.*;
-import com.aspose.tasks.model.DayType;
+import java.util.ArrayList;
+import java.util.List;
 public class WeekDay {
-  private String DayType = null;
+  private Integer DayType = null;
   private Boolean DayWorking = null;
   private String FromDate = null;
   private String ToDate = null;
@@ -14,7 +13,7 @@ public class WeekDay {
 	 * Gets DayType
 	 * @return DayType
 	 */
-  public String getDayType() {
+  public Integer getDayType() {
     return DayType;
   }
 
@@ -23,7 +22,7 @@ public class WeekDay {
 	 * Sets DayType
 	 * @param DayType DayType
 	 */
-  public void setDayType(String DayType) {
+  public void setDayType(Integer DayType) {
     this.DayType = DayType;
   }
 
@@ -47,7 +46,7 @@ public class WeekDay {
 
   /**
 	 * getFromDate
-	 * Gets DateTime
+	 * Gets String
 	 * @return FromDate
 	 */
   public String getFromDate() {
@@ -56,8 +55,8 @@ public class WeekDay {
 
 	/**
 	 * setFromDate
-	 * Sets DateTime
-	 * @param FromDate DateTime
+	 * Sets String
+	 * @param FromDate String
 	 */
   public void setFromDate(String FromDate) {
     this.FromDate = FromDate;
@@ -65,7 +64,7 @@ public class WeekDay {
 
   /**
 	 * getToDate
-	 * Gets DateTime
+	 * Gets String
 	 * @return ToDate
 	 */
   public String getToDate() {
@@ -74,8 +73,8 @@ public class WeekDay {
 
 	/**
 	 * setToDate
-	 * Sets DateTime
-	 * @param ToDate DateTime
+	 * Sets String
+	 * @param ToDate String
 	 */
   public void setToDate(String ToDate) {
     this.ToDate = ToDate;

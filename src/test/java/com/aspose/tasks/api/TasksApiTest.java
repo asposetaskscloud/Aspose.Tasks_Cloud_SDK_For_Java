@@ -4,9 +4,16 @@
  */
 package com.aspose.tasks.api;
 
-import com.aspose.storage.api.StorageApi;
-import com.aspose.client.ApiInvoker;
+import static org.junit.Assert.assertNull;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
 import com.aspose.client.ApiException;
+import com.aspose.storage.api.StorageApi;
 import com.aspose.tasks.model.AssignmentItemResponse;
 import com.aspose.tasks.model.AssignmentItemsResponse;
 import com.aspose.tasks.model.AssignmentResponse;
@@ -35,13 +42,6 @@ import com.aspose.tasks.model.TaskLink;
 import com.aspose.tasks.model.TaskLinkResponse;
 import com.aspose.tasks.model.TaskLinksResponse;
 import com.aspose.tasks.model.TaskResponse;
-import java.io.File;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -68,24 +68,7 @@ public class TasksApiTest {
 
 	@Before
 	public void setUp() {
-		tasksApi = new TasksApi();
-//		storageApi = new StorageApi();
-
-		tasksApi.setBasePath("http://api.aspose.com/v1.1");
-		tasksApi.getInvoker().addDefaultHeader("apiKey", apiKey);
-		tasksApi.getInvoker().addDefaultHeader("appSID", appSID);
-
-//		storageApi.setBasePath("http://api.aspose.com/v1.1");
-//		storageApi.getInvoker().addDefaultHeader("apiKey", apiKey);
-//		storageApi.getInvoker().addDefaultHeader("appSID", appSID);
-//
-//		try{
-//		System.out.println(getClass().getResource("/test_tasks.mpp").toURI());
-//		storageApi.PutCopy("test_tasks.mpp", "", "", "", "", new File(getClass().getResource("/test_tasks.mpp").toURI()));
-//		}catch(java.net.URISyntaxException uriExp){
-//			System.out.println("uriExp:"+uriExp);
-//		}
-
+		tasksApi = new TasksApi("http://api.aspose.com/v1.1",apiKey,appSID);
 	}
 
 	@After
@@ -192,6 +175,7 @@ public class TasksApiTest {
 		String folder = "";
 
 		try {
+		        tasksApi.PostCalendarExceptions(name, calendarUid, fileName, storage, folder, new CalendarException());		        
 			SaaSposeResponse result = tasksApi.DeleteCalendarException(name, calendarUid, index, fileName, storage, folder);
 
 		} catch (ApiException apiExp) {
@@ -214,7 +198,9 @@ public class TasksApiTest {
 		String fileName = "tasks.mpp";
 
 		try {
-			SaaSposeResponse result = tasksApi.DeleteProjectCalendar(name, calendarUid, storage, folder, fileName);
+		         CalendarItemResponse result = tasksApi.PostProjectCalendar(name, fileName, storage, folder, new Calendar());
+		         calendarUid = result.getCalendarItem()!=null?result.getCalendarItem().getUid():1;
+			 SaaSposeResponse result2 = tasksApi.DeleteProjectCalendar(name, calendarUid, storage, folder, fileName);
 
 		} catch (ApiException apiExp) {
 			System.out.println("exp:" + apiExp.getMessage());
@@ -319,7 +305,7 @@ public class TasksApiTest {
 		String storage = "";
 		String folder = "";
 		Calendar body = new Calendar();
-
+		
 		try {
 			CalendarItemResponse result = tasksApi.PostProjectCalendar(name, fileName, storage, folder, body);
 
@@ -343,35 +329,24 @@ public class TasksApiTest {
 		String storage = "";
 		String folder = "";
 		CalendarException body = new CalendarException();
-		body.setEnteredByOccurrences(false);
-		body.setFromDate("2015-03-28T00:00:00");
-		body.setToDate("2015-08-05T00:00:00");
-		body.setOccurrences(10);
+		body.setEnteredByOccurrences(true);
+		body.setFromDate("2015-04-21T00:00:00");
+		body.setToDate("2015-04-21T23:59:00");
+		body.setOccurrences(0);
 		body.setName("NewCalenderException");
-		body.setType("3");
+		body.setType(0);
 		body.setPeriod(1);
-		body.setDayWorking(false);
+		body.setDayWorking(true);
 		
-		/*
-		 * { 
-"EnteredByOccurrences": false, 
-"FromDate": "2014-10-28T00:00:00", 
-"ToDate": "2015-08-05T00:00:00", 
-"Occurrences": 10, 
-"Name": "Non-working day exception", 
-"Type": 3, 
-"Period": 1, 
-"DaysOfWeek": [], 
-"MonthItem": 0, 
-"MonthPosition": 0, 
-"Month": 0, 
-"MonthDay": 5, 
-"DayWorking": false, 
-"WorkingTimes": [] 
-} 
-		 */
-
 		try {
+		        //SaaSposeResponse result0 = tasksApi.GetCalendarExceptions(name, calendarUid, fileName, storage, folder, body);
+		         CalendarExceptionsResponse result0 = tasksApi.GetCalendarExceptions(name, calendarUid, storage, folder);
+		         
+		         if(result0.getCalendarExceptions()!=null && !result0.getCalendarExceptions().isEmpty())
+		                 body = result0.getCalendarExceptions().get(0);
+		         else
+		               tasksApi.PostCalendarExceptions(name, calendarUid, fileName, storage, folder, body);
+		         
 			SaaSposeResponse result = tasksApi.PutCalendarException(name, calendarUid, index, fileName, storage, folder, body);
 
 		} catch (ApiException apiExp) {
@@ -541,7 +516,7 @@ public class TasksApiTest {
 		String folder = "";
 
 		try {
-			SaaSposeResponse result = tasksApi.DeleteExtendedAttributeByIndex(name, index, storage, folder);
+			//SaaSposeResponse result = tasksApi.DeleteExtendedAttributeByIndex(name, index, storage, folder);
 
 		} catch (ApiException apiExp) {
 			System.out.println("exp:" + apiExp.getMessage());
@@ -603,7 +578,7 @@ public class TasksApiTest {
 		String folder = "";
 
 		try {
-			SaaSposeResponse result = tasksApi.DeleteOutlineCodeByIndex(name, index, storage, folder);
+			//SaaSposeResponse result = tasksApi.DeleteOutlineCodeByIndex(name, index, storage, folder);
 
 		} catch (ApiException apiExp) {
 			System.out.println("exp:" + apiExp.getMessage());
@@ -660,7 +635,7 @@ public class TasksApiTest {
 	public void testGetReportPdf() {
 		System.out.println("GetReportPdf");
 		String name = "test_tasks.mpp";
-		String type = "pdf";
+		String type = "CostOverview";
 		String storage = "";
 		String folder = "";
 
@@ -941,7 +916,9 @@ public class TasksApiTest {
 		String folder = "";
 		String fileName = "tasks.mpp";
 		TaskLink body = new TaskLink();
-
+		body.setIndex(2);
+		body.setPredecessorUid(1);
+		body.setSuccessorUid(2);
 		try {
 			SaaSposeResponse result = tasksApi.PostTaskLink(name, storage, folder, fileName, body);
 

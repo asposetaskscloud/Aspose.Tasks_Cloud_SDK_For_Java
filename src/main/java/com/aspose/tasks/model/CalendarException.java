@@ -1,9 +1,7 @@
 package com.aspose.tasks.model;
 
-import java.util.*;
-import org.joda.time.*;
-
-import com.aspose.tasks.model.Month;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CalendarException {
   private Boolean EnteredByOccurrences = null;
@@ -11,12 +9,12 @@ public class CalendarException {
   private String ToDate = null;
   private Integer Occurrences = null;
   private String Name = null;
-  private String Type = null;
+  private Integer Type = null;
   private Integer Period = null;
-  private List<DayType> DaysOfWeek = new ArrayList<DayType>();
-  private String MonthItem = null;
-  private String String = null;
-  private String Month = null;
+  private List<Integer> DaysOfWeek = new ArrayList<Integer>();
+  private Integer MonthItem = null;
+  private Integer MonthPosition = null;
+  private Integer Month = null;
   private Integer MonthDay = null;
   private Boolean DayWorking = null;
   private List<WorkingTime> WorkingTimes = new ArrayList<WorkingTime>();
@@ -112,19 +110,19 @@ public class CalendarException {
 
   /**
 	 * getType
-	 * Gets String
+	 * Gets Integer
 	 * @return Type
 	 */
-  public String getType() {
+  public Integer getType() {
     return Type;
   }
 
 	/**
 	 * setType
-	 * Sets String
-	 * @param Type String
+	 * Sets Integer
+	 * @param Type Integer
 	 */
-  public void setType(String Type) {
+  public void setType(Integer Type) {
     this.Type = Type;
   }
 
@@ -151,7 +149,7 @@ public class CalendarException {
 	 * Gets List<DayType>
 	 * @return DaysOfWeek
 	 */
-  public List<DayType> getDaysOfWeek() {
+  public List<Integer> getDaysOfWeek() {
     return DaysOfWeek;
   }
 
@@ -160,61 +158,61 @@ public class CalendarException {
 	 * Sets List<DayType>
 	 * @param DaysOfWeek List<DayType>
 	 */
-  public void setDaysOfWeek(List<DayType> DaysOfWeek) {
+  public void setDaysOfWeek(List<Integer> DaysOfWeek) {
     this.DaysOfWeek = DaysOfWeek;
   }
 
   /**
 	 * getMonthItem
-	 * Gets String
+	 * Gets Integer
 	 * @return MonthItem
 	 */
-  public String getMonthItem() {
+  public Integer getMonthItem() {
     return MonthItem;
   }
 
 	/**
 	 * setMonthItem
-	 * Sets String
-	 * @param MonthItem String
+	 * Sets Integer
+	 * @param MonthItem Integer
 	 */
-  public void setMonthItem(String MonthItem) {
+  public void setMonthItem(Integer MonthItem) {
     this.MonthItem = MonthItem;
   }
 
   /**
-	 * getString
-	 * Gets String
-	 * @return String
+	 * getMonthPosition
+	 * Gets MonthPosition
+	 * @return MonthPosition
 	 */
-  public String getString() {
-    return String;
+  public Integer getMonthPosition() {
+    return MonthPosition;
   }
 
 	/**
-	 * setString
-	 * Sets String
-	 * @param String String
+	 * setMonthPosition
+	 * Sets MonthPosition
+	 * @param MonthPosition MonthPosition
 	 */
-  public void setString(String String) {
-    this.String = String;
+  public void setMonthPosition(Integer MonthPosition) {
+    this.MonthPosition = MonthPosition;
   }
 
   /**
 	 * getMonth
-	 * Gets String
+	 * Gets Month
 	 * @return Month
 	 */
-  public String getMonth() {
+  public Integer getMonth() {
     return Month;
   }
 
 	/**
 	 * setMonth
 	 * Sets Month
-	 * @param String Month
+	 * @param Month Month
 	 */
-  public void setMonth(String Month) {
+  public void setMonth(Integer Month) {
     this.Month = Month;
   }
 
@@ -285,7 +283,7 @@ public class CalendarException {
     sb.append("  Period: ").append(Period).append("\n");
     sb.append("  DaysOfWeek: ").append(DaysOfWeek).append("\n");
     sb.append("  MonthItem: ").append(MonthItem).append("\n");
-    sb.append("  String: ").append(String).append("\n");
+    sb.append("  MonthPosition: ").append(MonthPosition).append("\n");
     sb.append("  Month: ").append(Month).append("\n");
     sb.append("  MonthDay: ").append(MonthDay).append("\n");
     sb.append("  DayWorking: ").append(DayWorking).append("\n");
