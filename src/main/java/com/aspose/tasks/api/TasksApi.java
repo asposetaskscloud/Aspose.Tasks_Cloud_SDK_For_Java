@@ -3,9 +3,9 @@ package com.aspose.tasks.api;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.aspose.client.ApiException;
-import com.aspose.client.ApiInvoker;
-import com.aspose.client.ApiInvokerResponse;
+import com.aspose.tasks.client.ApiException;
+import com.aspose.tasks.client.ApiInvoker;
+import com.aspose.tasks.client.ApiInvokerResponse;
 import com.aspose.tasks.model.AssignmentItemResponse;
 import com.aspose.tasks.model.AssignmentItemsResponse;
 import com.aspose.tasks.model.AssignmentResponse;
@@ -46,10 +46,25 @@ public class TasksApi {
     apiInvoker.addDefaultHeader(apiInvoker.APP_SID, appSid);
   }
 
+  public TasksApi(String basePath, String apiKey, String appSid, boolean isDebug) {
+          this.basePath = basePath;
+          apiInvoker.addDefaultHeader(apiInvoker.API_KEY, apiKey);
+          apiInvoker.addDefaultHeader(apiInvoker.APP_SID, appSid);
+          if(isDebug)
+                  apiInvoker.enableDebug();
+        }
+
   public TasksApi(String apiKey, String appSid) {
     apiInvoker.addDefaultHeader(apiInvoker.API_KEY, apiKey);
     apiInvoker.addDefaultHeader(apiInvoker.APP_SID, appSid);
   }
+
+  public TasksApi(String apiKey, String appSid, boolean isDebug) {
+          apiInvoker.addDefaultHeader(apiInvoker.API_KEY, apiKey);
+          apiInvoker.addDefaultHeader(apiInvoker.APP_SID, appSid);
+          if(isDebug)
+                  apiInvoker.enableDebug();
+        }
 
   public ApiInvoker getInvoker() {
     return apiInvoker;

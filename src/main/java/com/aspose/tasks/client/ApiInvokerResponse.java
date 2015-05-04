@@ -1,4 +1,4 @@
-package com.aspose.client;
+package com.aspose.tasks.client;
 
 import java.io.InputStream;
 

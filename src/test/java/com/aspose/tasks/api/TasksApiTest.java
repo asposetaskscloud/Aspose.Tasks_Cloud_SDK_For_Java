@@ -12,8 +12,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.aspose.client.ApiException;
 import com.aspose.storage.api.StorageApi;
+import com.aspose.tasks.client.ApiException;
 import com.aspose.tasks.model.AssignmentItemResponse;
 import com.aspose.tasks.model.AssignmentItemsResponse;
 import com.aspose.tasks.model.AssignmentResponse;
